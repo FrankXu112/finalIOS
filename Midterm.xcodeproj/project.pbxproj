@@ -14,6 +14,9 @@
 		3F641D2420D0660E0032ED7F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F641D2220D0660E0032ED7F /* LaunchScreen.storyboard */; };
 		3F641D2F20D0660E0032ED7F /* MidtermTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F641D2E20D0660E0032ED7F /* MidtermTests.swift */; };
 		3F641D3A20D0660E0032ED7F /* MidtermUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F641D3920D0660E0032ED7F /* MidtermUITests.swift */; };
+		3F641D5220D079460032ED7F /* MyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F641D5120D079460032ED7F /* MyCollectionViewCell.swift */; };
+		3FA8789520D314DB00E9DD34 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA8789420D314DB00E9DD34 /* DetailsViewController.swift */; };
+		3FCAEF2520D1D54000D18F4F /* Moive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FCAEF2420D1D54000D18F4F /* Moive.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,11 @@
 		3F641D3520D0660E0032ED7F /* MidtermUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MidtermUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F641D3920D0660E0032ED7F /* MidtermUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MidtermUITests.swift; sourceTree = "<group>"; };
 		3F641D3B20D0660E0032ED7F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F641D4D20D079050032ED7F /* Midterm-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Midterm-Bridging-Header.h"; sourceTree = "<group>"; };
+		3F641D5120D079460032ED7F /* MyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionViewCell.swift; sourceTree = "<group>"; };
+		3FA8789420D314DB00E9DD34 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		3FCAEF2420D1D54000D18F4F /* Moive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moive.swift; sourceTree = "<group>"; };
+		3FD7BA6E20DC582A0018C74B /* Delegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Delegate.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,12 +105,17 @@
 		3F641D1820D0660D0032ED7F /* Midterm */ = {
 			isa = PBXGroup;
 			children = (
+				3F641D5120D079460032ED7F /* MyCollectionViewCell.swift */,
 				3F641D1920D0660D0032ED7F /* AppDelegate.swift */,
 				3F641D1B20D0660D0032ED7F /* ViewController.swift */,
+				3FA8789420D314DB00E9DD34 /* DetailsViewController.swift */,
 				3F641D1D20D0660D0032ED7F /* Main.storyboard */,
 				3F641D2020D0660E0032ED7F /* Assets.xcassets */,
 				3F641D2220D0660E0032ED7F /* LaunchScreen.storyboard */,
 				3F641D2520D0660E0032ED7F /* Info.plist */,
+				3F641D4D20D079050032ED7F /* Midterm-Bridging-Header.h */,
+				3FCAEF2420D1D54000D18F4F /* Moive.swift */,
+				3FD7BA6E20DC582A0018C74B /* Delegate.h */,
 			);
 			path = Midterm;
 			sourceTree = "<group>";
@@ -193,6 +206,7 @@
 				TargetAttributes = {
 					3F641D1520D0660C0032ED7F = {
 						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 0930;
 					};
 					3F641D2920D0660E0032ED7F = {
 						CreatedOnToolsVersion = 9.3;
@@ -258,6 +272,9 @@
 			files = (
 				3F641D1C20D0660D0032ED7F /* ViewController.swift in Sources */,
 				3F641D1A20D0660D0032ED7F /* AppDelegate.swift in Sources */,
+				3FCAEF2520D1D54000D18F4F /* Moive.swift in Sources */,
+				3F641D5220D079460032ED7F /* MyCollectionViewCell.swift in Sources */,
+				3FA8789520D314DB00E9DD34 /* DetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -430,6 +447,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = C4L5Y82BG9;
 				INFOPLIST_FILE = Midterm/Info.plist;
@@ -439,6 +457,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = frank.Midterm;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Midterm/Midterm-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -448,6 +468,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = C4L5Y82BG9;
 				INFOPLIST_FILE = Midterm/Info.plist;
@@ -457,6 +478,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = frank.Midterm;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Midterm/Midterm-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
